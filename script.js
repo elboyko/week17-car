@@ -5,7 +5,7 @@ class Transport {
       this.brand = brand;
    }
    getInfo() {
-      return `тип ${this.type} + бренд ${this.brand}`
+      return `тип ${this.type}, бренд ${this.brand}`
    }
    getPrice() {
       return `цена: ${this.price}`
@@ -50,7 +50,7 @@ data.forEach((item) => {
       carPrice.textContent = car.getPrice();
       transportItem.append(carPrice);
 
-      const carDoors = document.createComment('p');
+      const carDoors = document.createElement('p');
       carDoors.textContent = car.getDoorsCount();
       transportItem.append(carDoors);
 
